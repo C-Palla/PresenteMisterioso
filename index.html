@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abra o presente</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- fundo colorido -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__gradient"></div>
+    <div class="bg__blobs" id="bg-blobs"></div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <!-- confetes gerados por JS -->
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <main class="stage">
+    <p class="message" id="message" role="status" aria-live="polite">
+      <span class="message__text">Abra esse presente</span>
+      <span class="message__hint">toque nele para abrir</span>
+    </p>
+
+    <div class="gift-area">
+      <button class="gift" id="gift" type="button" aria-label="Abrir o presente">
+        <span class="gift__shadow" aria-hidden="true"></span>
+        <span class="gift__svg" id="gift-svg"></span>
+      </button>
+      <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+    </div>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <div class="finale" id="finale" hidden>
+      <p class="finale__title" id="finale-title" role="status" aria-live="polite"></p>
+      <p class="finale__sub" id="finale-sub"></p>
+      <button class="dog-button" id="dog-button" type="button" aria-label="Faça carinho no cão orelha" disabled>
+        <img src="assets/orelha.jpg" alt="Cão Orelha em frente à sua casinha" />
+      </button>
+      <p class="dog-progress" id="dog-progress" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <script src="js/background.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/gifts.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
